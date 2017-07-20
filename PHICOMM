@@ -1,6 +1,6 @@
 vendor:PHICOMM
 product:K2(PSG1218)
-version:22.5.11.5 and earlier	
+version:V22.5.11.5 and earlier	
 type:remote code execution
 description:There is a url which we can access without credentials in an ajax function, and then our automated vulnerability detection tool 
             discovered a remote code execution in this url handling function in lighthttpd, which affects about 600, 000 devices.
