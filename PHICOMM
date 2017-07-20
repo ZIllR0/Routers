@@ -9,7 +9,7 @@ institution:Beihang University
 Vulnerability description
 -------------------------
 PHICOMM is an information communication domain equipment and service providers, products cover more than 70 countries. 
-We find a rce vulnerability in one of its router product. Details are as follows:
+We find a rce vulnerability in one of its router product after connecting to it. Details are as follows:
 There is a url which anyone can access without credentials in an ajax function.
 And then our automated vulnerability detection tool discovered a remote code execution in this url handling function in lighthttpd. 
 
