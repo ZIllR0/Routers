@@ -1,7 +1,7 @@
 vendor:PHICOMM
 product:K2(PSG1218)
 version:V22.5.11.5 and earlier	
-type:remote code execution
+type:Remote Code Execution
 author:Yuan Ming
 institution:Beihang University
 
@@ -9,8 +9,8 @@ institution:Beihang University
 Vulnerability description
 -------------------------
 PHICOMM is an information communication domain equipment and service providers, products cover more than 70 countries. 
-We find a rce vulnerability in one of its router product after connecting to it. Details are as follows:
-There is a url which anyone can access without credentials in an ajax function when you are able to access the router's WiFi.
+We find a RCE vulnerability in one of its router product after connecting to it. Details are as follows:
+There is a URL which anyone can access without credentials in an ajax function when you are able to access the router's WiFi.
 And then our automated vulnerability detection tool discovered a remote code execution in this url handling function in lighthttpd. 
 
 
@@ -19,6 +19,6 @@ POC:
 curl 'http://ip:port/*****.asp?action=set&MAC=1&IP=;&DeviceRename=1&isBind=1&ifType=reboot&BlockUser=-f;&UpMax=0&DownMax=0'
 
 This poc can reboot the router, resulting in ddos. 
-p.s.Given the vendor's security, we only provided part of the url.
+p.s.Given the vendor's security, we only provided part of the URL.
   
            
